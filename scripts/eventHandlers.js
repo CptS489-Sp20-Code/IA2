@@ -54,7 +54,6 @@ document.getElementById("menuBtn").addEventListener("click",function(e) {
     document.getElementById("menuBtnIcon").classList.add("fa-times");
     document.getElementById("sideMenu").style.width = "250px"; //open up menu
     menuOpen = true;
-    //toggleInputDisabled(true);
     e.stopPropagation();
   }
 });   

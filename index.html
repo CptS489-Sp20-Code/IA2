@@ -25,11 +25,11 @@
     integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">    
     <link rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
     crossorigin="anonymous">
     <!-- Our local CSS stylesheet -->
-    <link rel="stylesheet" href = "styles/navbar.css">
+    <link rel="stylesheet" href = "styles/index.css">
 
 </head>
  
@@ -50,8 +50,8 @@
       </button>
       <img src="http://tiny.cc/sslogo" alt="Speed Score Logo" height="38px"
       width="38px">
-      <span id="topBarTitle" style="color:white; font-size: 18px"></span>
-    </span>
+      <span id="topBarTitle" style="color:white; font-size: 18px">
+      Welcome!</span>
   </div>
   
   
@@ -78,15 +78,12 @@
 
 <!-- BEGIN FIXED BOTTOM BAR -->
 <div id ="bottomBar" class="bottombar" style="z-index: 100">
-<a id="feedMode" class="bottomBarBtn"><span style="display:block; padding-top:3px"
+<a id="mode1" class="bottomBarBtn"><span style="display:block; padding-top:3px"
 class="nonMenuItem fas fa-th-list"></span><span style="display:block;font-size:
-small">Feed</span></a>
-<a id="roundsMode" class="bottomBarBtn"><span style="display:block; padding-top:3px"
-class="nonMenuItem fas fa-history"></span><span style="display:block;font-size:
-small">Rounds</span></a>
-<a id="coursesMode" class="bottomBarBtn"><span style="display:block; padding-top:3px"
-class="nonMenuItem fas fa-flag"></span><span style="display:block;font-size:
-small">Courses</span></a> 
+small">View Data</span></a>
+<a id="mode2" class="bottomBarBtn"><span style="display:block; padding-top:3px"
+class="nonMenuItem fas fa-plus"></span><span style="display:block;font-size:
+small">Add Data</span></a>
 </div>
 <!-- END FIXED BOTTOM BAR-->
  
@@ -104,6 +101,7 @@ small">Courses</span></a>
                      style="text-align:center;width:90%; height:10%; font-size:
                      24px" required>
                  </label>
+                 <p></p>
                  <label for="passwordInput" style="padding:0px;
                  font-size:24px">Password: 
                      <input class="form-control" type="password"
@@ -128,22 +126,16 @@ small">Courses</span></a>
    </div>
  
    <!-- Activity feed page for viewing feed -->
-   <div id="feedModeDiv"  class="paddedPage">
-    <h1 align="center">Activity Feed</h1> <!-- <-- Change this-->
+   <div id="dataPageDiv"  class="paddedPage">
+    <h1 align="center">Data Table Page</h1> <!-- <-- Change this-->
     <div w3-include-html="html/underConstruction.html" ></div>
   </div>
 
    <!-- Rounds page displaying the user's round history -->
-  <div id="roundsModeDiv" class="paddedPage">
-      <h1 align="center">Rounds Page</h1>
+  <div id="addDataPageDiv" class="paddedPage">
+      <h1 align="center">Add Data Page</h1>
     <div w3-include-html="html/underConstruction.html" ></div>
   </div>
-
-   <!-- Page  for displaying and searching for courses -->
-   <div id="coursesModeDiv"  class="paddedPage">
-      <h1 align="center">Courses Page</h1>
-      <div w3-include-html="html/underConstruction.html" > </div>
-   </div>
 
   <!-- END APP PAGE DEFINITIONS -->
     

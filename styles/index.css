@@ -31,7 +31,7 @@
             background-color: #13294E; /* Background color is dark blue */
             overflow-x: hidden; /* Don't allow horizontal scroll */
             transition: 0.5s; /* Animation transition time is 0.5 sec */
-            padding-top: 60px; /* Place menu content 60 px from top */
+            padding-top: 2px; /* Place menu content 60 px from top */
         }
         /* applies only to an anchor tag that's a child of a sidenav element. */
         .sidenav a {
@@ -41,17 +41,6 @@
                 color: white;
                 display: block;
                 transition: 0.3s;
-            }
-            
-       
-        .sidenav div {
-                padding: 0px 0px 10px 6px;
-                text-decoration: none;
-                font-size: 16px;
-                color: white;
-                display: block;
-                transition: 0.3s;
-                /* border-bottom: 2px solid white; */
             }
          
          /* Required ordering of link style definitions: visited, hover, active. If out of this order, they won't work!! */
@@ -65,26 +54,33 @@
           background-color:  #13294E !important;
           color: white !important;
         }
+
+        .sidenav a:hover {
+            cursor: default;
+            text-decoration: none;
+            color: #13294E !important;
+            background-color: #F0F0F0;
+        }    
         
        
-        /* Cascading style within a style: This definition applies only to sidenavtitle class defined in an 
-           element that's a child of sidenav element. */   
-        .sidenav .sidenavtitle {
-                position: absolute;
-                width:100%;
-                top: 0px;
-                left: 0px;
-                padding: 0px 0px 0px 6px;
-                font-size: 18px;
-                margin-top: 20px;
-                margin-bottom: 20px !important;
-                border-bottom: 2px solid white;
-           }
-        
+         /* Cascading style within a style: This definition applies only to sidenavtitle class defined in an 
+         element that's a child of sidenav element. */   
+      .sidenav .sidenavtitle {
+        margin-bottom: 2px;
+        border-bottom: 2px solid white;
+        color: white;
+       }
+
+       .sidenav .sidenavuserID {
+         font-size: 14px;
+         color: white;
+       }
+    
         /* side menu button styling */
-        .menuBtn {
-            background-color:transparent; 
-            border-color:#13294E;
+        .menubtn {
+        background-color: transparent;
+        border-color: #13294E;
+        text-align: center;
         }
 
         /* side menu button icon styling */
@@ -128,10 +124,11 @@
                 color: #13294E !important;
         }
       
-/* Styling for the divs in the app. Ensures that the content at top isn't obscured by top bar */
+/* Styling for the page divs in the app. Ensures that the content at top isn't
+   obscured by top or bottom bar */
    .paddedPage {
-        padding: 36px 8px 0px 8px;
-        
+        padding: 56px 8px 56px 8px;
+        height: 100%;
     }
     
         
@@ -152,13 +149,14 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 100;
 }
 
 /* Style the links inside the bottom nav bar */
 .bottombar a {
     display: block;
     float: left;
-    width: 32%;
+    width: 50%;
     color: white;
     text-align: center;
     padding: 2px 2px;
@@ -191,7 +189,7 @@
 }
 
 /* Style the floating action button, which is fixed in the lower right of the app */
- .float{
+ .floatbutton{
 	position:fixed;
 	width:60px;
 	height:60px;
@@ -204,8 +202,9 @@
 	box-shadow: 2px 2px 3px #999;
 }
 
-.my-float{
-	margin-top:22px;
+.floaticon{
+    margin-top:22px;
+    color: white;
 }
 
 .floatBtnDiv a:visited {
@@ -219,3 +218,38 @@
 body {
     margin: 0;
 }
+
+/* This class disables a button */
+.disabledButton {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+  
+  .floatButton a:visited {
+  color: white !important;
+  }
+  
+  .floatButton a:active {
+  color: white !important;
+  }
+
+  /* Login page styling */
+.logintext {
+    text-align: center;
+    width: 90%;
+    height: 10%;
+    font-size: 24px;
+  }
+  
+  .loginbtn {
+    width: 70%;
+    font-size: 36px;
+  }
+  
+  /* Form styling */
+  
+  .form-center {
+    text-align: center;
+  }
+    
+  
